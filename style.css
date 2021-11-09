@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'Bold';
+    src: url("https://phoebe-leong.github.io/Fonts/RobotoMono-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'Regular';
+    src: url("https://phoebe-leong.github.io/Fonts/RobotoMono-Regular.ttf");
+}
+
+* {
+    text-align: center;
+
+    /* 'monospace' is a fallback font */
+    font-family: 'Regular', monospace;
+    background-color: #FCF1F1;
+    color: #16171A;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 50px;
+
+    /* 'monospace' is a fallback font */
+    font-family: 'Bold', monospace;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+button {
+    border: 2px solid #16171A;
+    cursor: pointer;
+    width: 110px;
+    height: 50px;
+    text-align: center;
+    background-color: transparent;
+}
+
+button:hover, button:focus {
+    color: #FCF1F1;
+    background-color: #16171A;
+}
+
+ul {
+    list-style-type: none;
+}

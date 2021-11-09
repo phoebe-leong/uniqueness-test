@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>uniqueness test</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="https://phoebe-leong.github.io/favicon.png">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <main>
+            <div id="intro">
+                <h1>How unique are you?</h1>
+                <h2>Take the test to find out!</h2><br><br>
+
+                <button id="button_intro" style="width: 200px" onclick="advance('q1', 3)">Start (or press Enter)</button><br><br>
+
+                <p style="font-size: 15px">Check out the source code <a id="src" href="https://github.com/phoebe-leong/uniqueness-test" target="_blank">here</a> [s]</p>
+            </div>
+
+            <div id="q1" style="visibility: hidden">
+                <h1>Question #1</h1>
+                <h2>What is your dominant hand?</h2><br>
+
+                <input type="radio" id="1" name="dominant"> [1] Right<br><br>
+                <input type="radio" id="2" name="dominant"> [2] Left<br><br>
+                <input type="radio" id="3" name="dominant"> [3] Ambidextrous<br><br><br>
+
+                <button id="button_q1" onclick="res([['1', 90, '-'], ['2', 10, '+'], ['3', 0.1, '+']]); advance('q2', 3)">Next</button>
+            </div>
+
+            <div id="q2" style="visibility: hidden">
+                <h1>Question #2</h1>
+                <h2>What is your gender?</h2><br>
+
+                <input type="radio" id="1" name="gender"> [1] Male<br><br>
+                <input type="radio" id="2" name="gender"> [2] Female<br><br>
+                <input type="radio" id="3" name="gender"> [3] Other<br><br><br>
+
+                <button id="button_q2" onclick="res([['1', 50.4, '-'], ['2', 49.6, '+'], ['3', 0.9, '+']]); advance('q3', 5)">Next</button>
+            </div>
+
+            <div id="q3" style="visibility: hidden;">
+                <h1>Question #3</h1>
+                <h2>What is your age bracket?</h2><br>
+
+                <input type="radio" id="1" name="age"> [1] 65+<br><br>
+                <input type="radio" id="2" name="age"> [2] 25 - 65<br><br>
+                <input type="radio" id="3" name="age"> [3] 15 - 24<br><br>
+                <input type="radio" id="4" name="age"> [4] 5 - 14<br><br>
+                <input type="radio" id="5" name="age"> [5] < 5<br><br>
+
+                <button id="button_q3" onclick="res([['1', 9.33, '+'], ['2', 49.7, '-'], ['3', 15.52, '+'], ['4', 16.75, '+'], ['5', 8.7, '+']]); advance('q4', 3)">Next</button>
+            </div>
+
+            <div id="q4" style="visibility: hidden;">
+                <h1>Question #4</h1>
+                <h2>Do you consider yourself part of the LGBTQ+ community?</h2><br>
+
+                <input type="radio" id="1" name="lgbtq"> [1] Yes<br><br>
+                <input type="radio" id="2" name="lgbtq"> [2] No<br><br>
+                <input type="radio" id="3" name="lgbtq"> [3] Not sure<br><br><br>
+
+                <button id="button_q4" onclick="res([['1', 18, '+'], ['2', 82, '-'], ['3', 8.7, '+']]); advance('q5', 2)">Next</button>
+            </div>
+
+            <div id="q5" style="visibility: hidden;">
+                <h1> Question #5</h1><br>
+                <h2>Do you live in the Southern Hemisphere or the Northern Hemisphere?</h2><br>
+
+                <input type="radio" id="1" name="hemisphere"> [1] Southern<br><br>
+                <input type="radio" id="2" name="hemisphere"> [2] Northern<br><br><br>
+
+                <button id="button_q5" onclick="res([['1', 20, '+'], ['2', 87, '-']]); results('q5', 0)">Finish</button>
+            </div>
+
+            <div id="results" style="visibility: hidden">
+                <h1>Results</h1><br>
+                <h2 id="result"></h2><br><br>
+
+                <p>Check out the statistics/sources <a href="refs.html">here</a> [p]</p>
+                <p>Thanks to my mother for helping with the percentage mathematics</p>
+            </div>
+        </main>
+    </body>
+</html>
